@@ -442,7 +442,7 @@
       margin: 1% 0  1% 11%;
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 600px) {
       .nav-item {
         margin-left: 4%;
         margin-right: 4%;
@@ -484,7 +484,7 @@
       }
     }
 
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 1200px) {
         .topnav a {
           float: none;
           display: block;
