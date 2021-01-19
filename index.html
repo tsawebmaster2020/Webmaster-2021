@@ -8,18 +8,67 @@
 
 
 <title>MedConnect</title>
+
+<script src="static/jquery.min.js.download"></script>
+  <script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+    
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+    
+          // Store hash
+          var hash = this.hash;
+    
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+       
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+    </script>
 </head>
 <body>
-<h1>
-
+<!-- 
 <ul class="nav">
-<li><a href="electrica.html"><img class="logo" src="electricalogo.png"></a></li>
-<li><a href="mission.html">MISSION</a></li>
-<li><a href="services.html">SERVICES</a></li>
-<li><a href="about.html">ABOUT US</a></li>
-<li><a href="sources.html">SOURCES</a></li>
-</ul>
-  </h1>
+<li><a href="index.html"><img class="logo" src="medconnectlogo.png"></a></li> 
+</ul> -->
+
+ <!-- Header starts -->
+ <div class="symmetry">
+  <div class="topnav sticky">
+      <div class="vc-head">
+          <a class="nav-item nav-link" href="index.html">HOME</a>
+          <a class="nav-item nav-link" href="mission.html">MISSION</a>
+          <a class="nav-item nav-link" href="services.html">SERVICES</a>
+          <a class="nav-item nav-link" href="about.html">ABOUT US</a>
+          <a class="nav-item nav-link" href="sources.html">SOURCES</a>
+      </div>
+  </div>
+</div>
+<!-- Header ends -->
 
 
 
