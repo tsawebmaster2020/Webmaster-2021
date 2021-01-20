@@ -8,19 +8,62 @@
 
 
 <title>MedConnect</title>
+<script src="static/jquery.min.js.download"></script>
+  <script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+    
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+    
+          // Store hash
+          var hash = this.hash;
+    
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+       
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+    </script>
 </head>
 <body>
-<h1>
-
-<ul class="nav">
-<li><a href="electrica.html"><img class="logo" src="medconnectlogo.png"></a></li>
-<li><a href="index.html">HOME</a></li>
-<li><a href="mission.html">MISSION</a></li>
-<li><a href="services.html">SERVICES</a></li>
-<li><a href="about.html">ABOUT US</a></li>
-<li><a href="sources.html">SOURCES</a></li>
-</ul>
-  </h1>
+<!-- Header starts -->
+<div class="symmetry">
+  <div class="topnav sticky">
+      <img class="logo" src="medconnectlogo.png">
+      <div class="vc-head">
+          <a class="nav-item nav-link" href="index.html">HOME</a>
+          <a class="nav-item nav-link" href="mission.html">MISSION</a>
+          <a class="nav-item nav-link" href="services.html">SERVICES</a>
+          <a class="nav-item nav-link" href="about.html">ABOUT US</a>
+          <a class="nav-item nav-link" href="sources.html">SOURCES</a>
+      </div>
+  </div>
+</div>
+<!-- Header ends -->
 
 
 
@@ -108,39 +151,5 @@ function showSlides(n) {
 </script>
 
 
-
-
-
-
-<br><br><br><br><br><br>
-
-<div class="infocontainer" id="section3">
-<img src="ev.jpg" width="400px" height="400px" class="infoimg">
-
-
-<h2 style="margin-left:0px;">Our Mission</h2>
-
-<p class="info">
-We want to prove to the world that electric cars are capable of not only permanently reducing carbon emissions released into the air, but also show the globe the abilities of electric cars on the road.
-</p>
-<br><br><br><br><br>
-<hr class="solid">
-<img src="electricalogo.png" width="500px" height="600px" class="infoimg">
-
-
-<h2 style="margin-left:0px;">Our Story</h2>
-<br>
-<p class="info">
-A group of engineers combined their passions and dreams for the future to start up the vehicle company Electrica in 2010. They envisioned a world where transportation was not only efficient but also sustainable for the environment. Today, Electrica manufactures a variety of cars that all run completely off of renewable resources. 
-</p>
-<hr class="solid">
-<br>
-<br>
-<img src="mandriving.jpg" class="centerimg" width="700px" height="400px" >
-<p class="info5">
-Launched in 2011, Electrica’s unique creation of piezoelectric tires have paved the way to permanently eliminate the need for non-renewable resources to power automobiles. Their first creation, Mercury, has taken the world by storm as it is Electrica’s fastest, safest, and most sustainable car. From there, in 2013, Electrica decided that if they wanted the future to only have sustainable cars, then they would need to create a car fit for a family. Thus, they launched the Neptune, and since then has been a huge success. Electrica then introduced Venus, their highest selling car due to its sleek design. Soon after, Electrica came up with, Jupiter, their most versatile design. Though each of their models have their own distinctive features, they all have one goal: reduce the amount of carbon emissions produced by vehicles.
-</p>
-
-  </div>
 </body>
 </html>
