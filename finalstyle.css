@@ -6,7 +6,7 @@
     }
     
     * {box-sizing:border-box}
-    /*.mySlides {display: none}
+    .mySlides {display: none}
     img {vertical-align: middle;}
     
     /* Slideshow container */
@@ -19,34 +19,104 @@
       height: auto;
       max-width: 50%;
     }
-    .slideshow-img2 {
-      height: auto;
-      max-width: 47%;
-      float: right;
-    }
-    .slideshow-img3 {
-      height: auto;
-      max-width: 47%;
-      float: center;
-    }
 
     .slideshow-text1 {
       float: right;
       text-align: center;
-      margin: 10% 20% 0 0;
-      color: white;
+      padding: 0% 0% 0 10%;
+      margin: 10% 10% 13% 0%;
+      font-size: 3vw;
+      
+    }
+
+    h3 {
+      font-family: Roboto-Thin;
+      color: rgb(11, 65, 75);
+    }
+
+    .row2 {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .column2 {
+      float: left;
+      width: 50%;
+    }
+
+    .columntext {
+      float: left;
+      width: 40%;
+      
+    }
+
+    .slideshow-box2 {
+      width: 100%
+      padding: 0% 0% 10% 0%;
+    }
+    .slideshow-img2 {
+      float: left;
+      width: 50%;
+      
     }
 
     .slideshow-text2 {
       float: left;
-      text-align: center;
-      margin: 20% 20% 0 0;
+      padding: 5% 10% 0% 5%;
+      font-size: 3vw;
+    }
+
+    .slideshow-img3 {
+      height: auto;
+      max-width: 50%;
+      display: block;
+      margin: auto;
     }
 
     .slideshow-text3 {
       text-align: center;
-      margin: 20% 20% 0 0;
+      margin: 0 0 0 0;
     }
+
+    .slide-left,.slide-left-img {
+      overflow:hidden;
+      animation: slide-left 3s infinite;
+    }
+    
+    @keyframes slide-left {
+      0% {
+        padding-left: 10.5%;
+        /*width: 100%;*/
+      }
+    
+      50% {
+        padding-left: 9.4%;
+        /*width: 100%;*/
+      }
+      100% {
+        padding-left: 10.5%;
+        /*width: 100%;*/
+      }
+
+    }
+
+    @keyframes slide-left-img {
+      0% {
+        width: 48%;
+        /*width: 100%;*/
+      }
+    
+      50% {
+        width: 50%;
+        /*width: 100%;*/
+      }
+      100% {
+        width: 48%;
+        /*width: 100%;*/
+      }
+    }
+
     /* Next & previous buttons */
     .prev, .next {
       cursor: pointer;
@@ -55,9 +125,9 @@
       width: auto;
       padding: 16px;
       margin-top: -22px;
-      color: white;
+      color: rgb(11, 65, 75);
       font-weight: bold;
-      font-size: 18px;
+      font-size: 2vw;
       transition: 0.6s ease;
       border-radius: 0 3px 3px 0;
       user-select: none;
@@ -82,10 +152,11 @@
       cursor: pointer;
       height: 15px;
       width: 15px;
-      margin: 0.5% 0.5% 0 0;
+      margin: 0.5% 0% 0 0.5%;
       background-color: #bbb;
       border-radius: 50%;
       display: inline-block;
+      position: sticky;
       transition: background-color 0.6s ease;
     }
     
@@ -111,72 +182,6 @@
       to {opacity: 1}
     }
 
-    
-    /*
-    .title-block {
-      position: absolute;
-    top: 35%;
-    left: 50%;
-      color: white;
-    
-    font-size: 40px;
-    transform: translate(-50%,-50%);
-    
-    }
-    
-    .title-block > p{
-    border: 3px solid white;
-    padding-right: 40px;
-    padding-left: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: rgba(255, 255, 255, 0.4);
-    font-weight: bold;
-    font-family: Montserrat;
-    }
-    .title-block2 {
-      position: absolute;
-      transform: translate(-50%,-50%);
-      color: white;
-    top: 35%;
-    left: 50%;
-    }
-    
-    .title-block3 {
-      position: absolute;
-      top: 35%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-      color: black;
-    }
-    
-    .carsbtn {
-    font-family: 'Tajawal';
-    font-size: 30px;
-    background-color: rgba(255,255,255,0);
-    border: 3px solid black;
-    padding-right: 40px;
-    padding-left: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: black;
-    transition: 0.3s;
-    border-radius: 20px;
-    }
-    .carsbtn > a {
-    color: black;
-    text-decoration: none;
-    }
-    .carsbtn:hover {
-    background-color: black;
-    color: black;
-    }
-    .carsbtn > a:hover {
-    color: white;
-    }
-    */
-    
-    
     /* LAST YEAR TSA STYLE ENDS */
 
     @font-face {
@@ -365,6 +370,7 @@
 
   
       @media screen and (max-width: 700px) {
+      @media screen and (max-width: 900px) {
         .topnav a {
           float: none;
           display: block;
