@@ -299,37 +299,7 @@
 
     }
 
-    @media screen and (max-width: 900px) {
-      .topnav a {
-        color:rgb(0, 128, 134);
-        text-align: center;
-        display: inline-block;
-        position: relative;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-family: Roboto-Light;
-        font-size: 90%;
-        padding: 1% 1% 1% 1%;
-        
-      }
-
-      .nav-item {
-        margin-left: 3%;
-        margin-right: 3%;
-      }
-      
-      .topnav {
-        float: left;
-        outline: none;
-        border: none;
-      }
-    
-      .vc-head {
-        margin: 1% 0 1% 6%;
-      }
-    }
-
-      @media screen and (max-width: 750px) {
+      @media screen and (max-width: 900px) {
         .topnav a {
           float: none;
           display: block;
