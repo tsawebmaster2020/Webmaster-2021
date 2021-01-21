@@ -329,7 +329,7 @@
       }
     }
 
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 750px) {
         .topnav a {
           float: none;
           display: block;
