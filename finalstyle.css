@@ -50,11 +50,6 @@
       
     }
 
-    .slideshow-box2 {
-      width: 100%;
-      padding: 0% 0% 10% 0%;
-    }
-
     .slideshow-img2 {
       float: left;
       width: 50%;
@@ -63,7 +58,7 @@
 
     .slideshow-text2 {
       float: left;
-      padding: 5% 10% 0% 5%;
+      padding: 5% 5% 0% 5%;
       font-size: 3vw;
     }
 
