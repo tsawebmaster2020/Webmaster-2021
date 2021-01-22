@@ -65,92 +65,292 @@ function myFunction() {
 </div>
 <!-- Header ends -->
  
-<div class="slideshow-container">
-
-
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="homepagepic1.jpg" style="width:100%" height="650px">
-<div class="slideshowblock">
-  <div class="title-block">
-    <p>ELECTRICA</p>
+<style>
+  body, html {
+    height: 100%;
+  }
   
-  </div>
-</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="ev.jpg" style="width:100%" height="650px">
-<div class="title-block2">
-
-    <p>#1 IN ELECTRIC VEHICLES</p>
-  </div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="slideshowpic3.jpg" style="width:100%" height="650px">
-
-<div class="title-block3">
-
-    <button class="carsbtn">
-<a href="ourvehicles.html">View Our Cars</a>
-</button>
-
-  </div>
-  </div>
-
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
-
-<!-- The dots/circles -->
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-
-
-
-
-
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+  .parallax {
+    /* The image used */
+    background-image: url('services.jpg');
+    }
+    
+  
+  .header {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    left: 2%;
+    z-index: 1;
+    color: white;
+    font-family: Roboto-light;
+    
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+
+  
+
+  
+  </style>
+  
+  
+  <div class="parallax">
+   
+  </div>
+ 
+  <h1 class="header">Our services provide you easy <br> access to your doctors 24/7</h1>
+  
+
+   <div class="layer"></div> 
+  
+  <div class="container"> 
+    <p> insert text </p>
+  </div>
+
+
+
+  <style>
+    /* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
 }
-</script>
 
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 25px;
+}
 
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
 
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
 
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
 
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+  </style>
+
+  <script>
+
+function openService(evt, serviceName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(serviceName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+  </script>
+<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openService(event, 'TextConnect')">TextConnect</button>
+  <button class="tablinks" onclick="openService(event, 'CallConnect')">CallConnect</button>
+  <button class="tablinks" onclick="openService(event, 'VideoConnect')">VideoConnect</button>
+</div>
+
+<!-- Tab content -->
+<div id="TextConnect" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="CallConnect" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p>
+</div>
+
+<div id="VideoConnect" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<style>
+  *, *:before, *:after {
+	 box-sizing: border-box;
+	 margin: 0;
+	 padding: 0;
+}
+ 
+ .buttons {
+  position: absolute;
+    top: 80%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    left: 5%;
+    z-index: 1;
+	 border-radius: 30px;
+}
+ .blob-btn {
+	 z-index: 1;
+	 position: relative;
+	 padding: 20px 46px;
+	 margin-bottom: 30px;
+	 text-align: center;
+	 text-transform: uppercase;
+	 color: #0505a9;
+	 font-size: 16px;
+   font-weight: bold;
+   font-family: Roboto-light;
+	 background-color: transparent;
+	 outline: none;
+	 border: none;
+	 transition: color 0.5s;
+	 cursor: pointer;
+	 border-radius: 30px;
+}
+ .blob-btn:before {
+	 content: "";
+	 z-index: 1;
+	 position: absolute;
+	 left: 0;
+	 top: 0;
+	 width: 100%;
+	 height: 100%;
+	 border: 2px solid #0505a9;
+	 border-radius: 30px;
+}
+ .blob-btn:after {
+	 content: "";
+	 z-index: -2;
+	 position: absolute;
+	 left: 3px;
+	 top: 3px;
+	 width: 100%;
+	 height: 100%;
+	 transition: all 0.3s 0.2s;
+	 border-radius: 30px;
+}
+ .blob-btn:hover {
+	 color: #fff;
+	 border-radius: 30px;
+}
+ .blob-btn:hover:after {
+	 transition: all 0.3s;
+	 left: 0;
+	 top: 0;
+	 border-radius: 30px;
+}
+ .blob-btn__inner {
+	 z-index: -1;
+	 overflow: hidden;
+	 position: absolute;
+	 left: 0;
+	 top: 0;
+	 width: 100%;
+	 height: 100%;
+	 border-radius: 30px;
+	 background: transparent;
+}
+ .blob-btn__blobs {
+	 position: relative;
+	 display: block;
+	 height: 100%;
+	 filter: url('#goo');
+}
+ .blob-btn__blob {
+	 position: absolute;
+	 top: 2px;
+	 width: 25%;
+	 height: 100%;
+	 background: #0505a9;
+	 border-radius: 100%;
+	 transform: translate3d(0, 150%, 0) scale(1.7);
+	 transition: transform 0.45s;
+}
+ @supports (filter: url('#goo')) {
+	 transform: translate3d(0, 150%, 0) scale(1.4);
+}
+ .blob-btn__blob:nth-child(1) {
+	 left: 0%;
+	 transition-delay: 0s;
+}
+ .blob-btn__blob:nth-child(2) {
+	 left: 30%;
+	 transition-delay: 0.08s;
+}
+ .blob-btn__blob:nth-child(3) {
+	 left: 60%;
+	 transition-delay: 0.16s;
+}
+ .blob-btn__blob:nth-child(4) {
+	 left: 90%;
+	 transition-delay: 0.24s;
+}
+ .blob-btn:hover .blob-btn__blob {
+	 transform: translateZ(0) scale(1.7);
+}
+ @supports (filter: url('#goo')) {
+	 transform: translateZ(0) scale(1.4);
+}
+ 
+</style>
+<div class="buttons">
+  <button class="blob-btn">
+    Connect with your doctor
+    <span class="blob-btn__inner">
+      <span class="blob-btn__blobs">
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+      </span>
+    </span>
+  </button>
+  <br/>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+      <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+    </filter>
+  </defs>
+</svg>
 
 
 </body>
