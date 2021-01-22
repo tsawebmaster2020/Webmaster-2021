@@ -23,24 +23,23 @@
     .slideshow-text1 {
       float: right;
       text-align: center;
-      padding: 0% 0% 0 10%;
-      margin: 10% 10% 13% 0%;
+      padding: 0% 0% 0 9.7%;
+      margin: 10% 10% 12.5% 0%;
       font-size: 3vw;
       
     }
 
     h3 {
-      font-family: Roboto-Thin;
       color: rgb(11, 65, 75);
     }
 
-    .row2 {
+    .row {
       content: "";
       clear: both;
       display: table;
     }
 
-    .column2 {
+    .column {
       float: left;
       width: 50%;
     }
@@ -52,9 +51,10 @@
     }
 
     .slideshow-box2 {
-      width: 100%
+      width: 100%;
       padding: 0% 0% 10% 0%;
     }
+
     .slideshow-img2 {
       float: left;
       width: 50%;
@@ -81,7 +81,7 @@
 
     .slide-left,.slide-left-img {
       overflow:hidden;
-      animation: slide-left 3s infinite;
+      animation: slide-left 2s;
     }
     
     @keyframes slide-left {
@@ -90,15 +90,10 @@
         /*width: 100%;*/
       }
     
-      50% {
-        padding-left: 9.4%;
-        /*width: 100%;*/
-      }
       100% {
-        padding-left: 10.5%;
+        padding-left: 9.7%;
         /*width: 100%;*/
       }
-
     }
 
     @keyframes slide-left-img {
@@ -303,7 +298,7 @@
       }
 
     }
-
+/*
       @media screen and (max-width: 900px) {
         .topnav a {
           float: none;
