@@ -317,6 +317,90 @@
     }
   
 
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  background-color: white;
+  margin-left: 35%;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab img {
+  background-color: inherit;
+  float: left;
+  padding-left: 2%;
+  padding-right: 2%;
+  
+  cursor: pointer;
+  
+  transition: 0.3s;
+  
+  
+  }
+  
+  /* Change background color of buttons on hover */
+ .tab img:hover {
+  background-color: rgba(0, 128, 134,0.3);
+  }
+
+  /* Create an active/current tablink class */
+  .tab img.active {
+  background-color: rgba(0, 128, 134,0.3);
+  } 
+  
+  /* Style the tab content */
+  .tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: 0.5px solid #ccc;
+  margin-left: 10%;
+  margin-right: 10%;
+  }
+  .tabcontent h2 {
+    font-size: 40px;
+    color: rgb(0, 128, 134);
+
+  }
+  .tabcontent p {
+    margin-right: 40%;
+    font-size: 30px;
+
+  }
+  .tabcontent img {
+    float: right;
+    margin-top: -18%;
+    margin-right: 10%;
+  }
+  .tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  }
+  
+  /* Go from zero to full opacity */
+  @keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+  }
+
+  hr {
+    height: .25rem;
+    width: 9.7%;
+    margin-left: 35%;
+    background: rgb(0, 128, 134);
+    border: none;
+    transition: .3s ease-in-out;
+  }
+  .two:hover ~ hr {
+    margin-left: 40%;
+  }
+  .tablinks:hover ~ hr {
+    margin-left: 40%;
+  }
+
+
+/* END TABS  */
+
+
+/* RESPONSIVE BROWSER */
     @media screen and (max-width: 1200px) {
       .nav-item {
         margin-left: 4%;

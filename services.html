@@ -89,123 +89,111 @@ function myFunction() {
     font-family: Roboto-light;
     
   }
+  .container {
+    width: 100;
+    padding: 5%;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(11, 65, 75);
+  }
+  h3 {
+      font-size: 40px;
+    }
 
-  
+    h4 {
+      font-size: 25px;
+      font-style: italic;
 
-  
+    }
+
   </style>
-  
   
   <div class="parallax">
    
   </div>
  
-  <h1 class="header">Our services provide you easy <br> access to your doctors 24/7</h1>
+  <h1 class="header">Our services provide you easy 24/7<br> access to your doctors</h1>
   
 
    <div class="layer"></div> 
   
   <div class="container"> 
-    <p> insert text </p>
+     <h3> How we can help </h3><br>
+     <h4> Personalized Care when you need it.</h4>
+     </div>
+     
   </div>
+<a name="services"></a>
 
+<!-- THESE ARE THE TABS -->
 
-
-  <style>
-    /* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-}
-
-/* Style the buttons that are used to open the tab content */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 25px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
-.tabcontent {
-  animation: fadeEffect 1s; /* Fading effect takes 1 second */
-}
-
-/* Go from zero to full opacity */
-@keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-  </style>
-
-  <script>
+<script>
 
 function openService(evt, serviceName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
+// Declare all variables
+var i, tabcontent, tablinks;
 
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(serviceName).style.display = "block";
-  evt.currentTarget.className += " active";
+// Get all elements with class="tabcontent" and hide them
+tabcontent = document.getElementsByClassName("tabcontent");
+for (i = 0; i < tabcontent.length; i++) {
+  tabcontent[i].style.display = "none";
 }
 
-  </script>
+// Get all elements with class="tablinks" and remove the class "active"
+tablinks = document.getElementsByClassName("tablinks");
+for (i = 0; i < tablinks.length; i++) {
+  tablinks[i].className = tablinks[i].className.replace(" active", "");
+}
+
+// Show the current tab, and add an "active" class to the button that opened the tab
+document.getElementById(serviceName).style.display = "block";
+evt.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen").click();
+
+</script>
 <!-- Tab links -->
 <div class="tab">
-  <button class="tablinks" onclick="openService(event, 'TextConnect')">TextConnect</button>
-  <button class="tablinks" onclick="openService(event, 'CallConnect')">CallConnect</button>
-  <button class="tablinks" onclick="openService(event, 'VideoConnect')">VideoConnect</button>
+  <div class="one">
+<img src="textconnect.png" style="height:15%;width:15%;" class="tablinks" onclick="openService(event, 'TextConnect')" id="defaultOpen"></img>
 </div>
-
+<div class="two">
+<img src="callconnect.png" style="height:15%;width:15%;" class="tablinks" onclick="openService(event, 'CallConnect')"></img>
+</div>
+<div class="three">
+<img src="videoconnect.png" style="height:15%;width:15%;" class="tablinks" onclick="openService(event, 'VideoConnect')"></img>
+</div>
+</div>
+<hr> </hr>
 <!-- Tab content -->
 <div id="TextConnect" class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
+  <br>
+<h2>TextConnect</h2>
+<br>
+<p>Have any questions? Put them here and one of our staff will provide you with a response.
+  Save yourself some time and money by connecting with one of our doctors right now. </p>
+  <img src="phonetextconnect.png"></img>
 </div>
 
 <div id="CallConnect" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p>
+<h2>CallConnect</h2>
+<br>
+<p>You can talk face-to-face with your doctor, from the comfort of your own home. Our VideoConnect service allows for one of the fastest connections on the market. 
+</p>
+<img src="phonecallconnect.png" style="height:50%;width:25%;"></img>
 </div>
 
 <div id="VideoConnect" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+<h2>VideoConnect</h2>
+<br>
+<p>Chat with a certified physician to take care of all your needs. This service allows you to receive verbal diagnoses and ask your doctor any questions, without the hassle of a waiting room.
+</p>
+<img src="phonevideoconnect.png" style="height:50%;width:25%;"></img>
 </div>
 
+
+<!-- BLOB TRANSITION BUTTON  -->
 <style>
   *, *:before, *:after {
 	 box-sizing: border-box;
@@ -241,6 +229,9 @@ function openService(evt, serviceName) {
 	 transition: color 0.5s;
 	 cursor: pointer;
 	 border-radius: 30px;
+}
+.blob-btn {
+  font-family: Roboto-light;
 }
  .blob-btn:before {
 	 content: "";
@@ -329,7 +320,7 @@ function openService(evt, serviceName) {
  
 </style>
 <div class="buttons">
-  <button class="blob-btn">
+  <button href="#services" class="blob-btn">
     Connect with your doctor
     <span class="blob-btn__inner">
       <span class="blob-btn__blobs">
@@ -351,6 +342,8 @@ function openService(evt, serviceName) {
     </filter>
   </defs>
 </svg>
+
+  
 
 
 </body>
