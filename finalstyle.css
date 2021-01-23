@@ -1,3 +1,11 @@
+body, html {
+  height: 100%;
+}
+
+h3 {
+  color: rgb(14, 83, 95);
+}
+
   .logo {
     padding: 0;
     opacity: 100%;
@@ -7,30 +15,38 @@
     
     * {box-sizing:border-box}
     .mySlides {display: none}
-    img {vertical-align: middle;}
+
     
     /* Slideshow container */
     .slideshow-container {
-      max-width: 100%;
+      width: 100%;
       padding-top: 10.5%;
       
     }
     .slideshow-img1 {
-      height: auto;
-      max-width: 50%;
+      background-image: url("IMG_7885.JPG");
+      /* Full height */
+      height: 100%; 
+      margin: 0% 50% 0 0;
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
 
     .slideshow-text1 {
-      float: right;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
       text-align: center;
-      padding: 0% 0% 0 9.7%;
-      margin: 10% 10% 12.5% 0%;
+      left: 50%;
+      z-index: 1;
+      padding: 0 10% 0 10%;
       font-size: 3vw;
+      font-family: Roboto-light;
       
-    }
-
-    h3 {
-      color: rgb(11, 65, 75);
     }
 
     .row {
@@ -44,29 +60,41 @@
       width: 50%;
     }
 
-    .columntext {
-      float: left;
-      width: 40%;
-      
-    }
-
     .slideshow-img2 {
-      float: left;
-      width: 50%;
+      background-image: url("connect_anywhere.jpeg");
+      /* Full height */
+      height: 100%; 
+      margin: 0% 0% 0 50%;
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
       
     }
 
     .slideshow-text2 {
-      float: left;
-      padding: 7% 5% 0% 10%;
+      position: absolute;
+      top: 150%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      text-align: center;
+      right: 50%;
+      z-index: 1;
+      padding: 0 10% 0 10%;
       font-size: 3vw;
+      font-family: Roboto-light;
     }
 
     .slideshow-img3 {
-      height: auto;
-      max-width: 50%;
-      display: block;
-      margin: auto;
+      background-image: url("our_services.jpeg");
+      /* Full height */
+      height: 100%; 
+      margin: 0% 0% 0 0%;
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
 
     .slideshow-text3 {
@@ -81,12 +109,12 @@
     
     @keyframes slide-right {
       0% {
-        padding-left: 9.2%;
+        padding: 0 10.8% 0 9.2%;
         /*width: 100%;*/
       }
     
       100% {
-        padding-left: 10%;
+        padding: 0 10% 0 10%;
         /*width: 100%;*/
       }
     }
@@ -98,16 +126,130 @@
     
     @keyframes slide-left {
       0% {
-        padding-left: 10.5%;
+        padding-left: 10.8%;
         /*width: 100%;*/
       }
     
       100% {
-        padding-left: 9.7%;
+        padding-left: 10%;
         /*width: 100%;*/
       }
     }
 
+    .buttons {
+      position: absolute;
+        top: 275%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        text-align: center;
+        left: 39%;
+        z-index: 1;
+       border-radius: 5%;
+    }
+    
+    .blob-btn {
+      z-index: 1;
+      position: relative;
+      padding: 20px 46px;
+      margin-bottom: 30px;
+      text-align: center;
+      text-transform: uppercase;
+      color: rgb(14, 83, 95);
+      font-size: 1vw;
+      font-weight: bold;
+      font-family: Roboto-light;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      transition: color 0.5s;
+      cursor: pointer;
+      border-radius: 30px;
+   }
+    .blob-btn:before {
+      content: "";
+      z-index: 1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border: 2px solid rgb(14, 83, 95);
+      border-radius: 30px;
+   }
+    .blob-btn:after {
+      content: "";
+      z-index: -2;
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s 0.2s;
+      border-radius: 30px;
+   }
+    .blob-btn:hover {
+      color: #fff;
+      border-radius: 30px;
+   }
+    .blob-btn:hover:after {
+      transition: all 0.3s;
+      left: 0;
+      top: 0;
+      border-radius: 30px;
+   }
+    .blob-btn__inner {
+      z-index: -1;
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 30px;
+      background: transparent;
+   }
+    .blob-btn__blobs {
+      position: relative;
+      display: block;
+      height: 100%;
+      filter: url('#goo');
+   }
+    .blob-btn__blob {
+      position: absolute;
+      top: 2px;
+      width: 25%;
+      height: 100%;
+      background: rgb(14, 83, 95);
+      border-radius: 100%;
+      transform: translate3d(0, 150%, 0) scale(1.7);
+      transition: transform 0.45s;
+   }
+    @supports (filter: url('#goo')) {
+      transform: translate3d(0, 150%, 0) scale(1.4);
+   }
+    .blob-btn__blob:nth-child(1) {
+      left: 0%;
+      transition-delay: 0s;
+   }
+    .blob-btn__blob:nth-child(2) {
+      left: 30%;
+      transition-delay: 0.08s;
+   }
+    .blob-btn__blob:nth-child(3) {
+      left: 60%;
+      transition-delay: 0.16s;
+   }
+    .blob-btn__blob:nth-child(4) {
+      left: 90%;
+      transition-delay: 0.24s;
+   }
+    .blob-btn:hover .blob-btn__blob {
+      transform: translateZ(0) scale(1.7);
+   }
+    @supports (filter: url('#goo')) {
+      transform: translateZ(0) scale(1.4);
+   }
 
     /* Next & previous buttons */
     .prev, .next {
@@ -117,7 +259,7 @@
       width: auto;
       padding: 16px;
       margin-top: -22px;
-      color: rgb(11, 65, 75);
+      color: rgb(14, 83, 95);
       font-weight: bold;
       font-size: 2vw;
       transition: 0.6s ease;
@@ -427,7 +569,7 @@
         text-decoration: none;
         text-transform: uppercase;
         font-family: Roboto-Light;
-        font-size: 90%;
+        font-size: 2vw;
         padding: 1% 1% 1% 1%;
         
       }
@@ -445,5 +587,17 @@
     
       .vc-head {
         margin: 1% 0 1% 6%;
+      }
+
+      .dot {
+        cursor: pointer;
+        height: 30px;
+        width: 30px;
+        margin: 0.5% 0% 0 0.5%;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        position: sticky;
+        transition: background-color 0.6s ease;
       }
     }
