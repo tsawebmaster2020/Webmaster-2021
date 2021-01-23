@@ -355,6 +355,7 @@
   border-top: 0.5px solid #ccc;
   margin-left: 10%;
   margin-right: 10%;
+  padding-bottom: 30%;
   }
   .tabcontent h2 {
     font-size: 40px;
@@ -399,6 +400,10 @@
 
 /* END TABS  */
 
+.title {
+  margin-left: 5%;
+  text-decoration: underline rgb(0, 128, 134);
+}
 
 /* RESPONSIVE BROWSER */
     @media screen and (max-width: 1200px) {
