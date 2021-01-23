@@ -51,10 +51,6 @@ function myFunction() {
     </script>
 </head>
 <body>
-<!-- 
-<ul class="nav">
-<li><a href="index.html"><img class="logo" src="medconnectlogo.png"></a></li> 
-</ul> -->
 
  <!-- Header starts -->
  <div class="symmetry">
@@ -72,25 +68,85 @@ function myFunction() {
 <!-- Header ends -->
 
 
+<div class="slideshow-img1">
+  <h3 class="slideshow-text1 slide-left">MedConnect provides immediate telemedical support.</h3>
+</div>
+<div class="slideshow-img2">
+  <h3 class="slideshow-text2 slide-right">Get in touch with our professionals, anytime and anywhere.</h3>
+</div>
+<div class="slideshow-img3">
+  <div class="buttons">
+    <a href="services.html">
+      <button class="blob-btn">
+      Our Services
+      <span class="blob-btn__inner">
+        <span class="blob-btn__blobs">
+          <span class="blob-btn__blob"></span>
+          <span class="blob-btn__blob"></span>
+          <span class="blob-btn__blob"></span>
+          <span class="blob-btn__blob"></span>
+        </span>
+      </span>
+    </button></a>
+    <br/>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+        <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+      </filter>
+    </defs>
+  </svg>
+</div>
+</div>
+<!--
 
- 
 <div class="slideshow-container">
 
 
-  <div class="mySlides fade row">
-    <img src="IMG_7885.JPG" class="slideshow-img1 column">
-    <h3 class="slideshow-text1 columntext slide-left"><span>MedConnect provides immediate telemedical support.</span></h3>
+  <div class="mySlides fade slideshow-img1">
+    
+    
+    <h3 class="slideshow-text1 slide-left">MedConnect provides immediate telemedical support.</h3>
+    
   </div>
   <div class="mySlides fade row">
     <div class="">
     <h3 class="column slideshow-text2 slide-right">Get in touch with our professionals, anytime and anywhere.</h3>
-    <img src="IMG_7885.JPG" class="slideshow-img2">
+    <img src="connect_anywhere.jpeg" class="slideshow-img2">
     </div>
   </div>
 
   <div class="mySlides fade">
-    <img src="IMG_7885.JPG" class="slideshow-img3">
-    <button class="slideshow-text3">Text Here</h3>
+    <img src="our_services.jpeg" class="slideshow-img3">
+    <div class="buttons">
+        <a href="services.html">
+          <button class="blob-btn">
+          Our Services
+          <span class="blob-btn__inner">
+            <span class="blob-btn__blobs">
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+            </span>
+          </span>
+        </button></a>
+        <br/>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+            <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+          </filter>
+        </defs>
+      </svg>
+    </div>
+
   </div>
 
   <div style="text-align:center">
@@ -99,13 +155,13 @@ function myFunction() {
       <span class="dot" onclick="currentSlide(3)"></span>
     </div>
 
-  <!-- Next and previous buttons -->
+   Next and previous buttons
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
 <br>
 
-<!-- The dots/circles -->
+ The dots/circles -->
 
 
 
@@ -141,6 +197,5 @@ function showSlides(n) {
 }
 </script>
 
-<h1>HELLLOOOOOOOOOO</h1>
 </body>
 </html>
