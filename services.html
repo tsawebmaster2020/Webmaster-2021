@@ -150,54 +150,271 @@ document.getElementById(serviceName).style.display = "block";
 evt.currentTarget.className += " active";
 }
 
-document.getElementById("defaultOpen").click();
+document.getElementByClassName("defaultOpen").click();
 
 </script>
 <!-- Tab links -->
 <div class="tab">
   <div class="one">
-<img src="textconnect.png" style="height:15%;width:15%;" class="tablinks" onclick="openService(event, 'TextConnect')" id="defaultOpen"></img>
+<img src="textconnect.png" style="height:15%;width:15%;" class="tablinks" onclick="openService(event, 'TextConnect')" class="active" id="defaultOpen"></img>
 </div>
-<div class="two">
-<img src="callconnect.png" style="height:15%;width:15%;" class="tablinks" onclick="openService(event, 'CallConnect')"></img>
-</div>
+
+<img src="callconnect.png" style="height:15%;width:15%;" class="tablinks" class="two" onclick="openService(event, 'CallConnect')"></img>
+
 <div class="three">
 <img src="videoconnect.png" style="height:15%;width:15%;" class="tablinks" onclick="openService(event, 'VideoConnect')"></img>
 </div>
+
 </div>
-<hr> </hr>
+<hr>
+
 <!-- Tab content -->
-<div id="TextConnect" class="tabcontent">
+<div id="TextConnect" class="tabcontent" style=display:block>
   <br>
 <h2>TextConnect</h2>
 <br>
-<p>Have any questions? Put them here and one of our staff will provide you with a response.
-  Save yourself some time and money by connecting with one of our doctors right now. </p>
-  <img src="phonetextconnect.png"></img>
+<p>Sometimes, patients have minor medical concerns or questions that they want to address but due to the pandemic, they don’t have the time or luxury to schedule an appointment with a doctor and meet with a professional face to face. </p> <br> <p>We have doctors available 24/7 to answer any questions relating to physical or mental health.
+  These questions can range from inquiries about minor aches or pains or scheduling/ future appointments.You will be connected with a real doctor who can use their medical knowledge to give credible advice should you need it.
+  No need to go through the hassle of preparing to meet face to face
+  Anything that can be achieved through a call is possible through TextConnect.
+  </p>
+  
+  </p>
+  <img class="phonepic1" src="phonetextconnect.png"></img>
 </div>
 
 <div id="CallConnect" class="tabcontent">
+  <br>
 <h2>CallConnect</h2>
 <br>
-<p>You can talk face-to-face with your doctor, from the comfort of your own home. Our VideoConnect service allows for one of the fastest connections on the market. 
+<p>Some of our patients find it easier to verbally communicate their minor medical concerns to our doctors and we agreed. We created CallConnect so that anyone who needs to communicate with their doctor can do it without the need for texting or video. With almost no wait time, our doctors can help you without the hassle of coming to the doctor’s office. 
 </p>
-<img src="phonecallconnect.png" style="height:50%;width:25%;"></img>
+<br>
+<p>Chat with a certified physician to take care of all your needs. This service allows you to receive verbal diagnoses and ask your doctor any questions, without the hassle of a waiting room. We have a 24/7 call service for any patient so that you can talk with a doctor about any minor health issue or concern. 
+  The phone service allows you to speak one-on-one with a medical professional without the need for a scheduled appointment.
+  These are often used for concerns about minor injuries, colds, or mental health related issues. 
+  
+</p>
+<img src="phonecallconnect.png" class="phonepic2" style="height:50%;width:25%;"></img>
 </div>
 
 <div id="VideoConnect" class="tabcontent">
+  <br>
 <h2>VideoConnect</h2>
 <br>
-<p>Chat with a certified physician to take care of all your needs. This service allows you to receive verbal diagnoses and ask your doctor any questions, without the hassle of a waiting room.
+<p>During the pandemic where staying at home and social distancing play a vital role in maintaining the health and safety of the community, we want to make sure that every patient can be able to virtually access their physicians. VideoConnect allows you to schedule appointments and check-ups with your doctor while avoiding potentially infectious waiting rooms, especially for patients with pre-existing conditions.
+</p> <br>
+<p> Through VideoConnect, you can talk face-to-face with your doctor, from the comfort of your own home. Through the MedConnect platform, telemedicine has never been easier. With the best video quality available and the fastest connection on the market, VideoConnect can help you communicate with your physicians for physical and mental health concerns. 
 </p>
-<img src="phonevideoconnect.png" style="height:50%;width:25%;"></img>
+<img src="phonevideoconnect.png" class="phonepic3" style="height:50%;width:25%;"></img>
 </div>
 <div class="title">
   <h3> How it works</h3>
 </div>
-<div class="stepblock">
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
 
+ol {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 0;
   
-</div>
+
+}
+ol li {
+  counter-increment: my-awesome-counter;
+  display: flex;
+  width: 50%;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding: 4%;
+  text-align: center;
+}
+ol li::before {
+  content: "0" counter(my-awesome-counter);
+  font-weight: bold;
+  font-size: 7rem;
+  margin-right: 0.5rem;
+  font-family: Roboto-light;
+  color: rgba(0, 128, 134,0.4);
+  line-height: 1;
+  
+}
+
+
+</style>
+
+  <ol>
+    <li>Using our MedConnect App or browser services, request a visit with one of our trained doctors or therapists.</li>
+    <li>Within the app, select your service during the time of your appointment.</li>
+    <li>Chat, Text, or Video conference to discuss your medical needs and recieve a diagnosis all from the comfort of your home. Every interaction between you and your doctor is confidential, safe, and efficient.</li>
+    <li>It's that easy! Receive the treatment you need from a highly qualified specialist at the tip of your fingers or the click of a mouse.
+    </li>
+  </ol>
+
+  <div class="title">
+    <h3> What we treat</h3>
+  </div>
+
+
+
+ 
+  <h6 class="treattitle">Physical</h6>
+  <button class="accordion">Abrasions</button>
+  <div class="panel">
+   <br> <p>Abrasions are minor injuries that occur when the skin is scraped or torn off. It creates a shallow wound that may cause pain. The scraped layer of skin can contain germs that can lead to an infection or other complication if not cleaned and attended to. </p><br>
+  </div>
+  
+  <button class="accordion">Acne</button>
+  <div class="panel">
+    <br><p>The cause of acne is when the pores on our skin become clogged. Acne is common around puberty in the teenage and young adult years but can occur at any stage in life. Acne can consist of blackheads, blemishes, whiteheads, pimples, or zits.</p><br>
+  </div>
+  
+  <button class="accordion">Allergies</button>
+  <div class="panel">
+    <br><p>Allergies are problems related to the function of  the immune system. There are a wide array of allergies and symptoms vary for each, so it is important to speak with one of our physicians for correct diagnosis.</p><br>
+  </div>
+
+  <button class="accordion">Endometriosis</button>
+  <div class="panel">
+    <br><p>This occurs when the tissue that makes up the uterine lining grows outside of the uterus. The most common symptom of this is intense pelvic pain. Most cases are a result of hereditary or immune disorders.
+    </p><br>
+  </div>
+
+  <button class="accordion">Frostbite</button>
+  <div class="panel">
+    <br><p>Frostbite is when the skin hardens from the constriction of blood vessels in the extremities from long exposure to freezing temperatures. Those who may have frostbite need to be treated immediately to avoid risk of severe damage or need for amputation. 
+    </p><br>
+  </div>
+
+  <button class="accordion">Gout</button>
+  <div class="panel">
+    <br><p>Gout is a rheumatic disease. The most common symptoms of gout include intense pain and swelling in the joints. Gout is likely caused by a person’s diet or a symptom of other illnesses such as obesity, hypertension, or diabetes.
+    </p><br>
+  </div>
+
+  <button class="accordion">Migranes</button>
+  <div class="panel">
+    <br><p>Migraines are one-sided headaches that have a throbbing or pounding sensation in the head. Patients typically experience sensitivity to light or sound, nausea, and vomiting during. Common causes of migraines include stress, starvation, strong smells, and even caffeine. 
+    </p><br>
+  </div>
+
+  <button class="accordion">Nausea</button>
+  <div class="panel">
+    <br><p>Nausea is when a person feels unwell, queasy, and has the urge to vomit. There are many reasons one can experience nausea, so it is important to discuss with your physician about it. Symptoms of nausea can happen quickly or for a long time.  
+    </p><br>
+  </div>
+
+  <button class="accordion">Pink Eye</button>
+  <div class="panel">
+    <br><p>Symptoms of pink eye include redness in the white of the eyes, discharge from the eye, itching or burning eyes, and blurred vision. Pink eye is highly contagious and should be treated immediately.  
+    </p><br>
+  </div>
+
+  <button class="accordion">Sinus Tnfection</button>
+  <div class="panel">
+   <br><p>A sinus infection occurs when the mucus membrane of the sinuses become infected and swollen or tender. Sinus infections occur when bacteria, viruses or fungi gather and breed in a person’s sinus cavity. </p><br>
+  </div>
+
+  <button class="accordion">Yeast Infection</button>
+  <div class="panel">
+   <br><p>Common examples of yeast infection include abnormal vaginal discharge, genital itching and burning, and vaginal soreness. Some cases of yeast infection can be treated on their own while some may need medical attention</p><br>
+  </div>
+
+<br>
+  <h6 class="treattitle">Mental</h6>
+  <h6 class="treattitle2">Anxiety Disorders</h6>
+  <button class="accordion">OCD</button>
+  <div class="panel">
+   <br><p>OCD stands for obsessive-compulsive disorder, and is often attributed to perfectionism. OCD is a debilitating disorder characterized by nearly impossible to control compulsions or “rituals” that someone from OCD suffers from. Oftentimes, those with OCD also end up becoming diagnosed with generalized anxiety disorder. </p><br>
+  </div>
+  <button class="accordion">Generalized Anxiety</button>
+  <div class="panel">
+   <br> <p>Chronic excessive worry about everyday activities, always expecting the worst to happen and overthinking. However, there are physical symptoms as well, including stomachaches, headaches or nausea. In order to be diagnosed with generalized anxiety disorder, symptoms must have been occurring for at least six months.</p><br>
+  </div>
+  <button class="accordion">Social Anxiety</button>
+  <div class="panel">
+   <br><p>Similar to generalized anxiety, as symptoms include headache, stomachache, and nausea, and chronic excessive worry about everyday situations. However, unlike generalized anxiety disorder, with a social anxiety disorder, symptoms are usually provoked by social situations such as public speaking, crowded places, or meeting new people. 
+  </p><br>
+  </div>
+  <button class="accordion">Post-Traumatic Stress Disorder</button>
+  <div class="panel">
+   <br> <p>A mental condition triggered when remembering a horrific event or experience. Symptoms of PTSD, such as reliving or having flashbacks of the event or having a physical or emotional reaction to a reminder of the experience can occur weeks, months, or even years after the event. Some people will try to avoid places, people or things that remind them of the event so they do not experience negative emotions related to that terrifying incident. </p><br>
+  </div>
+  <button class="accordion">Panic Disorder</button>
+  <div class="panel">
+   <br> <p>When a person suffers from a panic attack(s) for either no reason or if they are under a lot of stress. Panic disorder symptoms include multiple panic attacks in which a person feels chest or stomach pain, dizziness, sweating, numb or tingly limbs, hot or cold chills or has a faster heartbeat. It is more common in women than men and tends to start in people when they become young adults, but is also seen at earlier ages.</p><br>
+  </div>
+
+  <br><br><br>
+
+  <h6 class="treattitle2">Mood Disorders</h6>
+  <button class="accordion">Depression</button>
+  <div class="panel">
+   <br><p>Symptoms of depression include persistent feelings of sadness, anxiousness, emptiness, hopelessness, and helplessness. Depression can also lead to a loss of interest in activities, difficulty concentrating, sleeping, or making decisions. Physical symptoms that some may not recognize as symptoms of depression could include headaches, stomachaches, and pain that has no attribution to physical diagnosis. Thoughts of death or suicide are also attributed as symptoms of depression.
+  </p><br>
+  </div>
+  <button class="accordion">Bipolar</button>
+  <div class="panel">
+   <br><p>This disorder is characterized by extreme “highs and lows” in mood or energy. Being overly emotional or having mood swings does not mean that someone has bipolar disorder. Someone with bipolar disorder experiences extended periods of high mood or energy, which can often lead to recklessness or overconfidence, and experience extreme bouts of depression, with periods of normal mood and energy in between. 
+    <br>Type 1 Bipolar: A person with type 1 bipolar disorder experiences very high high moments called mania. 
+    <br>Type 2 Bipolar: A person with type 2 bipolar disorder has a cycle of depressive and hypomanic episodes.
+     </ul>
+    </p><br>
+  </div>
+<br><br><br>
+
+  <h6 class="treattitle2">Dementia</h6>
+  <button class="accordion">Alzheimer’s</button>
+  <div class="panel">
+   <br><p>Alzheimer’s is a progressive disease, which means it worsens over time. Alzheimer’s is the most common form of Dementia, as 60-80% of people with Dementia have Alzheimer’s. Most people with Alzheimer’s are 65 or older, but there are about 200,000 under the age of 65 who have Alzheimer’s and this is called younger-onset Alzheimer’s disease.
+  </p><br>
+  </div>
+  <button class="accordion">Parkinson’s</button>
+  <div class="panel">
+   <br><p>Parkinson’s disease is a nervous system disorder that affects movement. In Parkinson’s disease certain nerve cells in the brain gradually break down or die. Symptoms occur because of the loss of neurons that produce dopamine. When the dopamine levels decrease, it causes unusual brain activity, which leads to symptoms of Parkinson’s disease. 
+  </p><br>
+  </div>
+  <br><br><br>
+
+  <h6 class="treattitle2">Eating Disorders</h6>
+  <button class="accordion">Anorexia</button>
+  <div class="panel">
+   <br><p>Anorexia nervosa is an eating disorder involving dramatic weight loss and difficulty in maintaining the proper weight for a person’s age and height. It can affect anyone and people suffering from anorexia attempt to restrict their food and calorie intake due to fear of gaining weight. Anorexia not only affects a person’s body, but their mind as well. </p><br>
+  </div>
+  <button class="accordion">Bulimia</button>
+  <div class="panel">
+   <br><p>Bulimia is a potentially life-threatening disorder that involves a cycle of binging food and then vomiting or using laxatives to undo the binge and make up for the food they’ve eaten.</p><br>
+  </div>
+  <button class="accordion">Binge Eating Disorder</button>
+  <div class="panel">
+   <br><p>Binge eating disorder is where one will eat large amounts of food quickly and often causing discomfort. The binge eating causes the person to feel shame and/or guilt afterwards, which leads to unhealthy actions to undo the binge eating, also known as purging. When one is binge eating, they will feel a lack of control, as if they cannot stop overeating. 
+  </p><br>
+  </div>
+  <button class="accordion">Body Dysmorphic Disorder</button>
+  <div class="panel">
+   <br><p>Body dysmorphic disorder (BDD) is a body image disorder which is characterized by consistent depressive thoughts of one’s flaws and imperfections. People with BDD can dislike any part of their body, but some likely areas are, hair, skin, nose, chest, or stomach. BDD oftenly develops in adolescents and teens, around the age of 12-13, but it also affects adult men and women almost equally, with 2.5% men and 2.2% women impacted.</p><br>
+  </div>
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
 <!-- BLOB TRANSITION BUTTON  -->
 <style>
   *, *:before, *:after {
@@ -213,7 +430,7 @@ document.getElementById("defaultOpen").click();
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     text-align: center;
-    left: 5%;
+    left: 8%;
     z-index: 1;
 	 border-radius: 30px;
 }
@@ -224,7 +441,7 @@ document.getElementById("defaultOpen").click();
 	 margin-bottom: 30px;
 	 text-align: center;
 	 text-transform: uppercase;
-	 color: #0505a9;
+	 color: rgb(0, 128, 134);
 	 font-size: 16px;
    font-weight: bold;
    font-family: Roboto-light;
@@ -246,7 +463,7 @@ document.getElementById("defaultOpen").click();
 	 top: 0;
 	 width: 100%;
 	 height: 100%;
-	 border: 2px solid #0505a9;
+	 border: 2px solid  rgb(0, 128, 134);
 	 border-radius: 30px;
 }
  .blob-btn:after {
@@ -292,7 +509,7 @@ document.getElementById("defaultOpen").click();
 	 top: 2px;
 	 width: 25%;
 	 height: 100%;
-	 background: #0505a9;
+	 background: rgb(0, 128, 134);
 	 border-radius: 100%;
 	 transform: translate3d(0, 150%, 0) scale(1.7);
 	 transition: transform 0.45s;

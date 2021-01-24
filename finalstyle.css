@@ -497,7 +497,7 @@ h3 {
   border-top: 0.5px solid #ccc;
   margin-left: 10%;
   margin-right: 10%;
-  padding-bottom: 30%;
+  padding-bottom: 5%;
   }
   .tabcontent h2 {
     font-size: 40px;
@@ -511,8 +511,19 @@ h3 {
   }
   .tabcontent img {
     float: right;
-    margin-top: -18%;
-    margin-right: 10%;
+    
+    margin-right: 7%;
+  }
+  .phonepic1 {
+    margin-top: -58%;
+  }
+
+  .phonepic2 {
+    margin-top: -67%;
+  }
+
+  .phonepic3 {
+    margin-top: -60%;
   }
   .tabcontent {
   animation: fadeEffect 1s; /* Fading effect takes 1 second */
@@ -546,6 +557,77 @@ h3 {
   margin-left: 5%;
   text-decoration: underline rgb(0, 128, 134);
 }
+
+.treattitle {
+  text-align: center;
+  font-size: 35px;
+  padding: 2%;
+  font-family: Roboto-bold;
+  color:rgb(14, 83, 95)
+}
+.treattitle2 {
+  text-align: left;
+  font-size: 25px;
+  padding: 2%;
+  padding-top: 0;
+  font-family: Roboto-bold;
+  color:rgba(0, 128, 134,0.8);
+  margin-left: 10%;
+}
+/* ACCORDION */
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color:rgba(0, 128, 134,0.2);
+  color: #444;
+  cursor: pointer;
+margin-left:10%;
+margin-right: 10%;
+padding: 2%;
+  width: 80%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 30px;
+  transition: 0.4s;
+  position: center;
+
+
+}
+
+.active, .accordion:hover {
+  background-color:rgba(0, 128, 134, 0.5);
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  width: 80%;
+  margin-left:10%;
+margin-right: 10%;
+border: 2px solid rgba(0, 128, 134,0.5);
+border-top: none;
+font-size: 25px;
+border-bottom: none;
+
+}
+
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color:rgb(12, 52, 61);
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/* END ACCORDION */
+
 
 /* RESPONSIVE BROWSER */
     @media screen and (max-width: 1200px) {
