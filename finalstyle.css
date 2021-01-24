@@ -860,6 +860,11 @@ border-bottom: none;
     }
 
     @media screen and (max-width: 900px) {
+      
+      .logo {
+        width: 40%;
+        }
+      
       .topnav a {
         color:rgb(0, 128, 134);
         text-align: center;
@@ -900,17 +905,17 @@ border-bottom: none;
         transition: background-color 0.6s ease;
       }
       .slideshow-img1 {
-        height: 50%; 
-        margin: 0% 50% 0 0;
+        height: 45%; 
+        margin: 12.8% 50% 0 0;
         background-position: 60%;
       }
       .slideshow-text1 {
-        top: 25%;
+        top: 30%;
         font-size: 4vw;
       }
 
       .slideshow-img2 {
-        height: 50%; 
+        height: 45%; 
         margin: 0% 0% 0 50%;
       }
 
