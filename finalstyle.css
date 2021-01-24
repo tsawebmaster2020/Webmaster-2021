@@ -963,7 +963,7 @@ border-bottom: none;
       .slider__nav {
         width: 24px;
         height: 24px;
-        margin: 4rem 8px 2rem;
+        margin: 0 8px 16px;
       }
 
       .big-text {
