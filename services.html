@@ -102,14 +102,25 @@ function myFunction() {
       font-style: italic;
 
     }
+  
 
   </style>
+  <script> 
+  var spans = '<span>' + str.split('').join('</span><span>') + '</span>';
+$(spans).hide().appendTo('.header').each(function (i) {
+    $(this).delay(100 * i).css({
+        display: 'inline',
+        opacity: 0
+    }).animate({
+        opacity: 1
+    }, 100);
+});</script>
   
   <div class="parallax">
    
   </div>
  
-  <h1 class="header">Our services provide you easy 24/7<br> access to your doctors</h1>
+  <h1 class="header">Our services provide you easy 24/7 <br> access to your doctors</h1>
   
 
    <div class="layer"></div> 
