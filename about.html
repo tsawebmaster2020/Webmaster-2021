@@ -96,15 +96,15 @@ function myFunction() {
     text-align: center;
     color: rgb(11, 65, 75);
   }
-  
-    h4 {
+  h4 {
       font-size: 25px;
       font-style: italic;
+      padding: 0 10% 3% 10%;
 
     }
 
     h1 {
-  border-right: solid 3px rgba(0,255,0,.75);
+  border-right: solid 3px;
   white-space: nowrap;
   overflow: hidden;    
   font-family: 'Source Code Pro', monospace;  
@@ -133,9 +133,85 @@ h1 {
   to{border-right-color: transparent;}
 }
 
+html {
+  box-sizing: border-box;
+}
 
-    
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 29%;
+  margin-bottom: 16px;
+  margin-right: 3%;
+  padding: 0 8px;
+}
+
+h2 {
+  font-size: 2vw;
+}
   
+p {
+  font-size: 1vw;
+}
+
+.big-text {
+  text-align: center;
+}
+
+.mid-text {
+  text-align: center;
+  font-size: 2vw;
+  font-family: Roboto-boi;
+  padding: 1% 0 2% 0;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+  h2 {
+  font-size: 4vw;
+}
+  
+p {
+  font-size: 3vw;
+}
+.big-text {
+  font-size: 5vw;
+}
+h4 {
+
+      padding: 10% 10% 3% 10%;
+      font-size: 3vw;
+
+    }
+  .mid-text {
+  font-size: 4vw;
+}
+
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
 
   </style>
   
@@ -146,7 +222,239 @@ h1 {
   <h1 class="header">About Us</h1>
 
   <div class="layer"></div> 
-<p>This is a typewriter effect.</p>
+
+  <h3 class="big-text">Meet Our Staff</h3>
+
+  <h4>Each member of our staff are highly qualified healthcare professionals that puts the well being of their patients as one of their topmost concerns. The Medconnect team includes a wide range of certified doctors that ensures each patient receives immediate, quality care. Meet our physicians and therapists below.</h4>
+  
+  <h3 class="mid-text">Our Leadership Board</h3>
+
+  <div class="row">
+    <div class="column" style="margin-left: 3%;">
+      <div class="card">
+        <img src="Winston_Zou.jpg" style="width:100%">
+        <div class="container">
+          <h2>Dr. Winston Zou Ph.D.</h2>
+          <p class="title">Founder/CEO</p>
+          <p>Dr. Zou received a bachelor’s degree in literature from Thomas Jefferson University. He decided to explore the entrepreneur world to improve upon an issue he thought dire: access to urgent healthcare. Under Dr. Zou’s leadership alongside his team MedConnect is able to care for thousands of patients nationwide.</p>
+          <p>wzou@medconnect.org</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <img src="Anika_Gupta.png" style="width:100%">
+        <div class="container">
+          <h2>Dr. Anika Gupta Ph.D.</h2>
+          <p class="title">Founder</p>
+          <p>Dr. Gupta holds a bachelor’s degree in psychology and business from the Dartmouth University. With her excellent logical reasoning and creativity Dr. Gupta revolutionizes how MedConnect’s patients are treated. She has been a pivotal member of the MedConnect leadership team for 7 years where she has accomplished many inspiring things.</p>
+          <p>agupta@medconnect.org</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="card">
+        <img src="Marissa_Fontine.jpeg" style="width:100%">
+        <div class="container">
+          <h2>Dr. Marissa Fontine Ph.D.</h2>
+          <p class="title">Founder</p>
+          <p>Dr. Fontine has a bachelor's degree in business and marketing from Northeastern University. With 8 years of leadership experience, Dr. Fontine is able to ensure that the company provides comprehensive treatments and cohesive solutions. She works closely with our staff and patients to develop our company’s telehealth platform.</p>
+          <p>mfontine@medconnect.org</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="mid-text">Our Doctors</h3>
+
+<div class="row">
+  <div class="column" style="margin-left: 3%;">
+    <div class="card">
+      <img src="Fred_Jones.png" style="width:100%">
+      <div class="container">
+        <h2>Dr. Fred Jones M.D.</h2>
+        <p class="title">Pediatrician</p>
+        <p>Dr. Jones holds a bachelor’s degree in Biology from Penn State University and a medical degree from Stanford University. He has been a pediatrician for 8 years and a part of the Medconnect team for 3 years.</p>
+        <p>fjones@medconnect.org</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="Sarah_Flemings.png" style="width:100%">
+      <div class="container">
+        <h2>Dr. Sarah Flemings O.D.</h2>
+        <p class="title">Pediatrician</p>
+        <p>Dr. Flemings has a bachelor’s degree in Chemistry from Arizona State University and a medical degree from Brandeis University. She has been a pediatrician for 5 years and a part of the Medconnect team for 3 years.</p>
+        <p>sflemings@medconnect.org</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="Julio_Rodriguez.png" style="width:100%">
+      <div class="container">
+        <h2>Dr. Julio Rodriguez O.D.</h2>
+        <p class="title">General Practitioner</p>
+        <p>Dr. Rodriguez has a bachelor’s degree in Biology from the University of Pittsburgh and a medical degree from Johns Hopkins University. He has been a general practitioner for 8 years and part of the MedConnect team for 5 years.</p>
+        <p>jrodriguez@medconnect.org</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="column" style="margin-left: 3%;">
+    <div class="card">
+      <img src="Gina_Baptiste.jpg" style="width:100%">
+      <div class="container">
+        <h2>Dr. Gina Baptiste M.D.</h2>
+        <p class="title">General Practitioner</p>
+        <p>Dr. Baptiste has a bachelor’s degree in Molecular Biology from Lehigh University and a medical degree from University of Chicago. She has been a general practitioner for 12 years and a part of the MedConnect team for 4 years.</p>
+        <p>gbapstist@medconnect.org</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="Katherine_Yu.png" style="width:100%">
+      <div class="container">
+        <h2>Dr. Katherine Yu M.D.</h2>
+        <p class="title">General Practitioner</p>
+        <p>Dr. Yu has a bachelor’s degree in biochemistry from Purdue University and a medical degree from University of California. She has been a general practitioner for 7 years and a part of the MedConnect team for 2 years.</p>
+        <p>kyu@medconnect.org </p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="Pierre_Giovanni.png" style="width:100%">
+      <div class="container">
+        <h2>Dr. Pierre Giovanni M.D.</h2>
+        <p class="title">General Practitioner</p>
+        <p>Dr. Giovanni has a bachelor's degree in Chemistry from Ohio State University and a medical degree from Boston College. He has been a general practitioner for 5 years and a part of the MedConnect team for 3 years.</p>
+        <p>pgiovanni@medconnect.org</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="column" style="margin-left: 3%;">
+    <div class="card">
+      <img src="Anna_Ritters.png" style="width:100%">
+      <div class="container">
+        <h2>Dr. Anna Ritters M.D.</h2>
+        <p class="title">Nephrologist</p>
+        <p>Dr. Ritters has a bachelor’s degree in biology from Rutgers University and a medical degree from Columbia University. She has been a nephrologist for 6 years and a part of the MedConnect team for 2 years.</p>
+        <p>aritters@medconnect.org</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="Stephen_Walker.png" style="width:100%">
+      <div class="container">
+        <h2>Dr. Stephen Walker O.D.</h2>
+        <p class="title">Dermatologist</p>
+        <p>Dr. Walker has a bachelor’s degree in biology from Swarthmore College and a medical degree from University of Virginia. He has been a dermatologist for 15 years and a part of the MedConnect team for 4 years.</p>
+        <p>swalker@medconnect.org</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="Denise_Rizal.png" style="width:100%">
+      <div class="container">
+        <h2>Dr. Denise Rizal M.D.</h2>
+        <p class="title">Obstetrician/Gynecologist</p>
+        <p>Dr. Rizal has a bachelor’s degree in biophysics from Drexel University and a medical degree from University of Vermont. She has been in OB/GYN care for 7 years and a part of the Medconnect team for 4 years.</p>
+        <p>drizal@medconnect.org</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="column" style="margin-left: 3%;">
+    <div class="card">
+      <img src="Isabelle_Nguyen.png" style="width:100%">
+      <div class="container">
+        <h2>Dr. Isabelle Nguyen O.D.</h2>
+        <p class="title">Endocrinologist</p>
+        <p>Dr. Bunson earned a bachelor’s degree in sociology from Bowdoin College and a medical degree also from Boston University. She has been an endocrinologist for 9 years and a part of the Medconnect team for 5 years.</p>
+        <p>inguyen@medconnect.org</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="Kari_Bunson.png" style="width:100%">
+      <div class="container">
+        <h2>Dr. Kari Bunson M.D.</h2>
+        <p class="title">Ohphtalmologist</p>
+        <p>Dr. Bunson earned a bachelor’s degree in Biochemistry from the University of Michigan and a medical degree also from the University of Michigan. She has been an ophthalmologist for 10 years and a part of the Medconnect team for 2 years.</p>
+        <p>kbunson@medconnect.org</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="Jeremy_Reyes.png" style="width:100%">
+      <div class="container">
+        <h2>Dr. Jeremy Reyes O.D.</h2>
+        <p class="title">Allergist</p>
+        <p>Dr. Reyes received a bachelor’s degree in anthropology from Emory University and his medical degree from Scranton University. He has been an allergists physician for 12 years and a part of the Medconnect team for 4 years.</p>
+        <p>jreyes@medconnect.org</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="column" style="margin-left: 3%;">
+    <div class="card">
+      <img src="Soumyaa_Banala.png" style="width:100%">
+      <div class="container">
+        <h2>Dr. Soumyaa Banala O.D.</h2>
+        <p class="title">Urologist</p>
+        <p>Dr. Banala received a bachelor’s degree in molecular biology from James Madison University and his medical degree from University of Arizona. He has been a psychiatrist for 9 years and a part of the Medconnect team for 3 years.</p>
+        <p>sbanala@medconnect.org</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="Leanne_Cohen.png" style="width:100%">
+      <div class="container">
+        <h2>Dr. Leanne Cohen</h2>
+        <p class="title">Psychiatrist</p>
+        <p>Dr. Cohen received a bachelor's degree in psychology from St. Joseph’s University and her medical degree from Scranton University. She has been a psychiatrist for 8 years and a part of the MedConnect team for 4 years.</p>
+        <p>lcohen@medconnect.org</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="Cheryl_Katz.png" style="width:100%">
+      <div class="container">
+        <h2>Dr. Cheryl Katz</h2>
+        <p class="title">Psychiatrist</p>
+        <p>Dr. Katz has a bachelor’s degree in psychology from University of Pittsburgh and her medical degree from Stanford University. She has been a psychiatrist for 10 years and a part of the MedConnect team for  5 years.</p>
+        <p>ckatz@medconnect.org</p>
+      </div>
+    </div>
+  </div>
+</div>
+
     
   
   
