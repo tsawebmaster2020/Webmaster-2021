@@ -700,11 +700,13 @@ a {
   /* Change background color of buttons on hover */
  .tab img:hover {
   background-color: rgba(0, 128, 134,0.3);
+  
   }
 
   /* Create an active/current tablink class */
   .tab img.active {
   background-color: rgba(0, 128, 134,0.3);
+  border-bottom: .30rem solid rgb(0, 128, 134);
   } 
   
   /* Style the tab content */
@@ -753,7 +755,7 @@ a {
   }
 
   hr {
-    height: .25rem;
+    height: .30rem;
     width: 9.7%;
     margin-left: 35%;
     background: rgb(0, 128, 134);
