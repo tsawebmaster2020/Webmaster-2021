@@ -67,6 +67,94 @@ function myFunction() {
 </div>
 <!-- Header ends -->
 
+<style>
+  body, html {
+    height: 100%;
+  }
+  
+  .parallax {
+    /* The image used */
+    background-image: url('index.jpg');
+    }
+    
+  
+  .header {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    left: 30%;
+    z-index: 1;
+    color: white;
+    font-family: Roboto-light;
+    background-color:rgba(11, 65, 75, 0.4);
+    
+
+  }
+
+
+  h1 {
+  border-right: solid 3px rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 60px;
+  color: white;
+  padding: 0;
+}
+
+/* Animation */
+h1 {
+  animation: animated-text 4s steps(29,end) 1s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 472px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color:rgba(11, 65, 75, 0.6);}
+  to{border-right-color: transparent;}
+}
+
+.subtitle {
+  position: absolute;
+    top: 65%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    left: 32.5%;
+    z-index: 1;
+    color: white;
+    font-family: Roboto-light;
+    font-size: 2vw;
+    font-style: italic;
+}
+    
+  
+
+  </style>
+  
+  <div class="parallax">
+   
+  </div>
+ <div class="headerbackground"> 
+  <h1 class="header">MedConnect</h1>
+
+</div>
+<h4 class="subtitle"> Personalized care when you need it.</h4>
+
+
+
 
 <div class="slideshow-img1">
   <h3 class="slideshow-text1 slide-left">MedConnect provides immediate telemedical support.</h3>

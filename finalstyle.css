@@ -41,7 +41,7 @@ h3 {
 
     .slideshow-text1 {
       position: absolute;
-      top: 50%;
+      top: 140%;
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
@@ -79,7 +79,7 @@ h3 {
 
     .slideshow-text2 {
       position: absolute;
-      top: 140%;
+      top: 235%;
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
@@ -104,13 +104,14 @@ h3 {
 
     .slideshow-text3 {
       position: absolute;
-      top: 235%;
+      top: 330%;
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       text-align: center;
-      right: 13%;
-      background: linear-gradient(to right, rgb(14, 83, 95) , rgb(14, 83, 95) , rgb(14, 83, 95) , white, white);
+      right: 50%;
+      
+      background:  rgb(14, 83, 95);
   /* clip hackery */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -156,12 +157,12 @@ h3 {
 
     .buttons {
       position: absolute;
-        top: 275%;
+        top: 370%;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         text-align: center;
-        left: 39%;
+        left: 13.5%;
         z-index: 1;
        border-radius: 5%;
     }
