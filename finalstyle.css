@@ -574,7 +574,7 @@ h3 {
     
     .topnav {
       overflow: visible;
-      z-index: 9999; 
+      z-index: 999999; 
     }
     
     .topnav a {
