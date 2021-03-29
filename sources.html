@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <meta name="viewport" content="width=device-width, user-scalable=false;">
+  <link rel="stylesheet" type="text/css" href="bootstrap.css">
 <link rel="stylesheet" type="text/css" href="finalstyle.css">
-<link href="https://fonts.googleapis.com/css?family=Tajawal:200" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+
 
 
 <title>MedConnect</title>
@@ -66,19 +67,33 @@ function myFunction() {
 <body>
 
  <!-- Header starts -->
- <div class="symmetry">
-  <div class="topnav sticky">
-      <div class="vc-head">
-          <img class="logo" src="medconnectlogo.png">
-          <a class="nav-item nav-link" href="index.html">HOME</a>
-          <a class="nav-item nav-link" href="mission.html">MISSION</a>
-          <a class="nav-item nav-link" href="services.html">SERVICES</a>
-          <a class="nav-item nav-link" href="about.html">ABOUT US</a>
-          <a class="nav-item nav-link" href="sources.html">SOURCES</a>
-      </div>
-  </div>
-</div>
+ <nav class="sticky topnav navbar navbar-expand-md bg-dark navbar-dark">
+  <img class="logo" src="medconnectlogo.png">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="mission.html">MISSION</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="services.html">SERVICES</a>
+      </li>  
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">ABOUT</a>
+      </li>  
+      <li class="nav-item">
+        <a class="nav-link" href="sources.html">SOURCES</a>
+      </li>    
+    </ul>
+  </div>  
+</nav>
 <!-- Header ends -->
+
 <div class="sources-head">
   <h2 style="text-align: center; color:rgb(14, 83, 95);">Research and Media Sources</h2>
   <h3 style="text-align: center;">References</h3>
@@ -103,5 +118,9 @@ function myFunction() {
   </div>
   <h3 class="sources-head">All pictures featured in the website are royalty free and are either taken from Pixabay, Shopify, Canva, or Pexels, or originals created by the Webmaster team. Illustrations were created using Canva. All names, characters, and incidents portrayed in this website are fictitious and only serve the purpose of fulfilling the TSA Webmaster event requirements. No identification with actual persons (living or deceased), places, buildings, and products is intended or should be inferred. Here is a link to our <a href="https://drive.google.com/file/d/1P4TcPaYz8N5pDYA1BYdrNBF9AhJDYwvt/view?usp=sharing">plan of work log and Student Copyright Checklist.</a></h3>
   <br><br>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
 </body>
 </html>
