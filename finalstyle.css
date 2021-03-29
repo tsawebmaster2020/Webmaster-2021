@@ -1,9 +1,38 @@
+/* fonts + header begins */
+
+@font-face {
+  font-family: Grotesk-bold;
+  src: url(font/hk-grotesk/HKGrotesk-Bold.otf);
+}
+
+@font-face {
+  font-family: Grotesk-regular;
+  src: url(font/hk-grotesk/HKGrotesk-Regular.otf);
+}
+
+@font-face {
+  font-family: Grotesk-LightItalic;
+  src: url(font/hk-grotesk/HKGrotesk-LightItalic.otf);
+}
+
+@font-face {
+  font-family: Grotesk-light;
+  src: url(font/hk-grotesk/HKGrotesk-Light.otf);
+}
+@font-face {
+  font-family: Grotesk-light;
+  src: url(font/hk-grotesk/HKGrotesk-Light.otf);
+}
+
+
 body, html {
   height: 100%;
 }
 
 
+footer {
 
+}
 
 
 h3 {
@@ -13,44 +42,142 @@ h3 {
 
 
   .logo {
-    margin: 0% 50% 0 0%;
+    margin: 1% 50% 1% 0%;
     width: 15%;
     height: auto;
     }
     
-    * {box-sizing:border-box}
-    .mySlides {display: none}
-
     
-    /* Slideshow container */
-    .slideshow-container {
-      width: 100%;
-      padding-top: 10.5%;
-      
+    * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  font-family: Grotesk-regular;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+    .img1-bound {
+      background-color: rgb(194, 178, 36);
+      padding: 0% 0 0% 0;
     }
     .slideshow-img1 {
-      background-image: url("stethoscope-2617701_1920.jpg");
+      background-image: url("download_app.png");
       /* Full height */
       height: 100%; 
-      margin: 0% 50% 0 0;
+      margin: 0% 0% 0% 0;
+      padding: 5% 0 5% 0;
       /* Center and scale the image nicely */
       background-position: 50%;
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: 84%;
+      background-color: rgb(12, 52, 61);
     }
 
     .slideshow-text1 {
       position: absolute;
-      top: 140%;
+      top: 175%;
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       text-align: center;
-      left: 50%;
+      right: 0%;
       z-index: 1;
-      padding: 0 10% 0 10%;
+      padding: 3% 10% 3% 10%;
+      margin: 0% 8% 0% 8%;
       font-size: 3vw;
       font-family: Grotesk-light;
+      background-color: white;
       
     }
 
@@ -66,25 +193,25 @@ h3 {
     }
 
     .slideshow-img2 {
-      background-image: url("connect_anywhere.jpeg");
+      background-image: url("phone_remind.png");
       /* Full height */
       height: 95%; 
       margin: 0% 0% 0 50%;
       /* Center and scale the image nicely */
       background-position: center;
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: 60%;
       
     }
 
     .slideshow-text2 {
       position: absolute;
-      top: 235%;
+      top: 240%;
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       text-align: center;
-      right: 50%;
+      right: 40%;
       z-index: 1;
       padding: 0 10% 0 10%;
       font-size: 3vw;
@@ -92,14 +219,57 @@ h3 {
     }
 
     .slideshow-img3 {
-      background-image: url("our_services.jpeg");
       /* Full height */
-      height: 100%; 
-      margin: 0% 0% 0 0%;
+      height: 200%; 
+      padding: 5% 5% 5% 5%;
       /* Center and scale the image nicely */
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      background-color: rgb(12, 52, 61);
+    }
+
+    .img3-box1 {
+      color: white;
+      background-color: #307178;
+      height: 80%;
+    }
+
+    .img3-box2 {
+      color: white;
+      background-color: #E24B4B;
+      height: 80%;
+    }
+
+    .img3-text {
+      font-family: Grotesk-light;
+      padding: 0 5% 0 5%;
+
+    }
+
+    .img3-text2 {
+      font-family: Grotesk-light;
+    }
+
+    .img3-text2-quote {
+      font-style: italic;
+    }
+
+    .img3-box3 {
+      color: white;
+      background-color: #02A5AE;
+    }
+
+    .img3-box3-tr1 {
+      color: #02A5AE;
+      background-color: white;
+    }
+
+    .red-x {
+      font-family: Grotesk-bold;
+      color:#E24B4B;
+      font-size: 1.25em;
+
     }
 
     .slideshow-text3 {
@@ -119,6 +289,11 @@ h3 {
       padding: 0 10% 0 10%;
       font-size: 3vw;
       font-family: Grotesk-light;
+    }
+
+    .download-slides {
+      text-align: center;
+      padding: 5% 0 20% 0;
     }
 
     .slide-left {
@@ -157,14 +332,28 @@ h3 {
 
     .buttons {
       position: absolute;
-        top: 370%;
+        top: 540%;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         text-align: center;
-        left: 13.5%;
+        left: 20%;
         z-index: 1;
        border-radius: 5%;
+       font-family: Grotesk-light; 
+    }
+
+    .buttonss {
+      position: absolute;
+        top: 540%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        text-align: center;
+        left: 60%;
+        z-index: 1;
+       border-radius: 5%;
+       font-family: Grotesk-light; 
     }
     
     .blob-btn {
@@ -270,70 +459,7 @@ h3 {
       transform: translateZ(0) scale(1.4);
    }
 
-    /* Next & previous buttons */
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 58%;
-      width: auto;
-      padding: 16px;
-      margin-top: -22px;
-      color: rgb(14, 83, 95);
-      font-weight: bold;
-      font-size: 2vw;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-    }
-    
-    /* Position the "next button" to the right */
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
-    
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover, .next:hover {
-      background-color: rgba(0,0,0,0.8);
-    }
- 
-    
-    
-    
-    /* The dots/bullets/indicators */
-    .dot {
-      cursor: pointer;
-      height: 15px;
-      width: 15px;
-      margin: 0.5% 0% 0 0.5%;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      position: sticky;
-      transition: background-color 0.6s ease;
-    }
-    
-    .active, .dot:hover {
-      background-color: #717171;
-    }
-    
-    /* Fading animation */
-    .fade {
-      -webkit-animation-name: fade;
-      -webkit-animation-duration: 1.5s;
-      animation-name: fade;
-      animation-duration: 1.5s;
-    }
-    
-    @-webkit-keyframes fade {
-      from {opacity: .4} 
-      to {opacity: 1}
-    }
-    
-    @keyframes fade {
-      from {opacity: .4} 
-      to {opacity: 1}
-    }
+  
 
     /* Mission page */
 
@@ -369,6 +495,7 @@ h3 {
     .big-text {
       font-size: 4vw;
       color: white;
+      font-family: Grotesk-bold;
     }
 
 
@@ -395,6 +522,7 @@ h3 {
   margin-bottom: 1%;
   margin-left: 5%;
   background-color: #13343D;
+  font-family: Grotesk-regular;
 }
 
 #stats th {
@@ -547,42 +675,6 @@ h3 {
 
 
     /* fonts + header begins */
-
-    @font-face {
-      font-family: Roboto-Light;
-      src: url(font/Roboto-Light.ttf);
-    }
-    * {
-      font-family: Roboto-Light;
-      box-sizing: border-box;
-    }
-    @font-face {
-      font-family: DSRegular;
-      src: url(font/DancingScript-Regular.ttf);
-    }
-    @font-face {
-      font-family: DSVariable;
-      src: url(font/DancingScript-VariableFont_wght.ttf)
-    }
-    @font-face {
-      font-family: Roboto-Bold;
-      src: url(font/Roboto-Bold.ttf)
-    }
-    @font-face {
-      font-family: Roboto-boi;
-      src: url(font/Roboto-BoldItalic.ttf)
-    }
-    @font-face {
-      font-family: Roboto-Thin;
-      src: url(font/Roboto-Thin.ttf)
-    }
-    @font-face {
-      font-family: Roboto-Black;
-      src: url(font/Roboto-Black.ttf)
-    }
-    
-
-
 
     @font-face {
       font-family: Grotesk-bold;
@@ -945,17 +1037,6 @@ font-family: Grotesk-light;
         margin: 1% 0 1% 6%;
       }
 */
-      .dot {
-        cursor: pointer;
-        height: 30px;
-        width: 30px;
-        margin: 0.5% 0% 0 0.5%;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        position: sticky;
-        transition: background-color 0.6s ease;
-      }
       .slideshow-img1 {
         height: 45%; 
         margin: 12.8% 50% 0 0;
@@ -1021,7 +1102,7 @@ font-family: Grotesk-light;
 
       .big-text {
         margin-bottom: -10%;
-        font-family: Grotesk-bold;
+       
       }
 
       .slider__caption {
@@ -1046,5 +1127,8 @@ font-family: Grotesk-light;
       .logo {
         width: 30%;
         }
+<<<<<<< HEAD
       }
+=======
+>>>>>>> 718eeae7f3ac4f280a41e2d9a8e645157cb25b1d
     }
