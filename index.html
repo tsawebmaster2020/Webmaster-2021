@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="finalstyle.css">
-<link href="https://fonts.googleapis.com/css?family=Tajawal:200" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" type="text/css" href="bootstrap.css">
+
+<link rel="stylesheet" type="text/css" href="finalstyle.css">
 
 <title>MedConnect</title>
 
@@ -52,7 +51,34 @@ function myFunction() {
 </head>
 <body>
 
- <!-- Header starts -->
+  <nav class="sticky topnav navbar navbar-expand-md bg-dark navbar-dark">
+    <img class="logo" src="medconnectlogo.png">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mission.html">MISSION</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">SERVICES</a>
+        </li>  
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">ABOUT</a>
+        </li>  
+        <li class="nav-item">
+          <a class="nav-link" href="sources.html">SOURCES</a>
+        </li>    
+      </ul>
+    </div>  
+  </nav>
+  <br>
+
+ <!-- Header starts
  <div class="symmetry">
   <div class="topnav sticky">
     <div class="vc-head">
@@ -66,7 +92,7 @@ function myFunction() {
       </div>
   </div>
 </div>
-<!-- Header ends -->
+ Header ends -->
 
 <style>
   body, html {
@@ -89,10 +115,8 @@ function myFunction() {
     left: 30%;
     z-index: 1;
     color: white;
+    background-color:rgba(12, 52, 61, 0.4);
     font-family: Grotesk-regular;
-    background-color:rgba(11, 65, 75, 0.4);
-    
-
   }
 
 
@@ -286,6 +310,9 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 </body>
 </html>

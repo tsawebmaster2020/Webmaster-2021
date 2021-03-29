@@ -617,7 +617,7 @@ h3 {
     
     .topnav {
       overflow: visible;
-      z-index: 9999; 
+      z-index: 999999; 
     }
     
     .topnav a {
@@ -896,6 +896,10 @@ font-family: Grotesk-light;
 
 /* RESPONSIVE BROWSER */
     @media screen and (max-width: 1200px) {
+      .logo {
+        width: 20%;
+        }
+      /*
       .nav-item {
         margin-left: 4%;
         margin-right: 4%;
@@ -906,13 +910,13 @@ font-family: Grotesk-light;
       }
 
     }
-
+*/
     @media screen and (max-width: 900px) {
-      
+  
       .logo {
-        width: 40%;
+        width: 20%;
         }
-      
+      /*
       .topnav a {
         color:rgb(0, 128, 134);
         text-align: center;
@@ -930,7 +934,7 @@ font-family: Grotesk-light;
         margin-left: 3%;
         margin-right: 3%;
       }
-      
+    
       .topnav {
         float: left;
         outline: none;
@@ -940,7 +944,7 @@ font-family: Grotesk-light;
       .vc-head {
         margin: 1% 0 1% 6%;
       }
-
+*/
       .dot {
         cursor: pointer;
         height: 30px;
@@ -1036,3 +1040,10 @@ font-family: Grotesk-light;
         margin-top: -30%;
       }
     }
+
+    @media screen and (max-width: 600px) {
+  
+      .logo {
+        width: 30%;
+        }
+      }
