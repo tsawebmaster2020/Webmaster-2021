@@ -1,9 +1,38 @@
+/* fonts + header begins */
+
+@font-face {
+  font-family: Grotesk-bold;
+  src: url(font/hk-grotesk/HKGrotesk-Bold.otf);
+}
+
+@font-face {
+  font-family: Grotesk-regular;
+  src: url(font/hk-grotesk/HKGrotesk-Regular.otf);
+}
+
+@font-face {
+  font-family: Grotesk-LightItalic;
+  src: url(font/hk-grotesk/HKGrotesk-LightItalic.otf);
+}
+
+@font-face {
+  font-family: Grotesk-light;
+  src: url(font/hk-grotesk/HKGrotesk-Light.otf);
+}
+@font-face {
+  font-family: Grotesk-light;
+  src: url(font/hk-grotesk/HKGrotesk-Light.otf);
+}
+
+
 body, html {
   height: 100%;
 }
 
 
+footer {
 
+}
 
 
 h3 {
@@ -118,29 +147,37 @@ h3 {
   .prev, .next,.text {font-size: 11px}
 }
 
+    .img1-bound {
+      background-color: rgb(194, 178, 36);
+      padding: 0% 0 0% 0;
+    }
     .slideshow-img1 {
-      background-image: url("stethoscope-2617701_1920.jpg");
+      background-image: url("download_app.png");
       /* Full height */
       height: 100%; 
-      margin: 0% 50% 0 0;
+      margin: 0% 0% 0% 0;
+      padding: 5% 0 5% 0;
       /* Center and scale the image nicely */
       background-position: 50%;
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: 84%;
+      background-color: rgb(12, 52, 61);
     }
 
     .slideshow-text1 {
       position: absolute;
-      top: 140%;
+      top: 175%;
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       text-align: center;
-      left: 50%;
+      right: 0%;
       z-index: 1;
-      padding: 0 10% 0 10%;
+      padding: 3% 10% 3% 10%;
+      margin: 0% 8% 0% 8%;
       font-size: 3vw;
       font-family: Grotesk-light;
+      background-color: white;
       
     }
 
@@ -156,25 +193,25 @@ h3 {
     }
 
     .slideshow-img2 {
-      background-image: url("connect_anywhere.jpeg");
+      background-image: url("phone_remind.png");
       /* Full height */
       height: 95%; 
       margin: 0% 0% 0 50%;
       /* Center and scale the image nicely */
       background-position: center;
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: 60%;
       
     }
 
     .slideshow-text2 {
       position: absolute;
-      top: 235%;
+      top: 240%;
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       text-align: center;
-      right: 50%;
+      right: 40%;
       z-index: 1;
       padding: 0 10% 0 10%;
       font-size: 3vw;
@@ -182,14 +219,57 @@ h3 {
     }
 
     .slideshow-img3 {
-      background-image: url("our_services.jpeg");
       /* Full height */
-      height: 100%; 
-      margin: 0% 0% 0 0%;
+      height: 200%; 
+      padding: 5% 5% 5% 5%;
       /* Center and scale the image nicely */
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      background-color: rgb(12, 52, 61);
+    }
+
+    .img3-box1 {
+      color: white;
+      background-color: #307178;
+      height: 80%;
+    }
+
+    .img3-box2 {
+      color: white;
+      background-color: #E24B4B;
+      height: 80%;
+    }
+
+    .img3-text {
+      font-family: Grotesk-light;
+      padding: 0 5% 0 5%;
+
+    }
+
+    .img3-text2 {
+      font-family: Grotesk-light;
+    }
+
+    .img3-text2-quote {
+      font-style: italic;
+    }
+
+    .img3-box3 {
+      color: white;
+      background-color: #02A5AE;
+    }
+
+    .img3-box3-tr1 {
+      color: #02A5AE;
+      background-color: white;
+    }
+
+    .red-x {
+      font-family: Grotesk-bold;
+      color:#E24B4B;
+      font-size: 1.25em;
+
     }
 
     .slideshow-text3 {
@@ -209,6 +289,11 @@ h3 {
       padding: 0 10% 0 10%;
       font-size: 3vw;
       font-family: Grotesk-light;
+    }
+
+    .download-slides {
+      text-align: center;
+      padding: 5% 0 20% 0;
     }
 
     .slide-left {
@@ -247,12 +332,25 @@ h3 {
 
     .buttons {
       position: absolute;
-        top: 370%;
+        top: 540%;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         text-align: center;
-        left: 13.5%;
+        left: 20%;
+        z-index: 1;
+       border-radius: 5%;
+       font-family: Grotesk-light; 
+    }
+
+    .buttonss {
+      position: absolute;
+        top: 540%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        text-align: center;
+        left: 60%;
         z-index: 1;
        border-radius: 5%;
        font-family: Grotesk-light; 
