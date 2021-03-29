@@ -2,9 +2,12 @@
 <html>
 <head>
 
-  <meta name="viewport" content="width=device-width, user-scalable=false;">
+  <meta name="viewport" content="width=device-width, user-scalable=false; initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" type="text/css" href="bootstrap.css">
 <link rel="stylesheet" type="text/css" href="finalstyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/botui/build/botui.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/botui/build/botui-theme-default.css" />
+   
 
 
 <title>MedConnect</title>
@@ -290,6 +293,84 @@ ol li::before {
     <li>It's that easy! Receive the treatment you need from a highly qualified specialist at the tip of your fingers or the click of a mouse.
     </li>
   </ol>
+
+  <div class="botui-app-container" id="hello-world">
+    <bot-ui></bot-ui>
+  </div>
+  <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/botui/build/botui.js"></script>
+  <script>
+    var botui = new BotUI('hello-world');
+
+
+    botui.message.add({
+    
+      content: 'Welcome to MedConnect!'
+
+    }).then(function () {
+
+    
+
+    botui.message.add({ // show a message
+    delay: 2000,
+    loading: true,
+    content: 'Whats your name?'
+  });
+}).then(function () { // wait till its shown
+   return botui.action.text({ // show 'text' action
+    action: {
+      placeholder: 'Your name'
+    }
+  });
+}).then(function (res) { // get the result
+  botui.message.add({
+    content: 'Welcome ' + res.value + ', what can I help you with today?',
+  });
+}).then(function () {
+
+  botui.action.button({
+  action: [
+    { // show only one button
+      text: 'Schedule an appointment',
+      value: 'one'
+    },
+    {
+      text: 'Speak to a professional',
+      value: 'two'
+    }
+  ]
+}).then(function (res) { // will be called when a button is clicked.
+  console.log(res.value); // will print "one" from 'value'
+});
+
+
+// botui.action.select({
+//   action: {
+//       placeholder : "Select an option", 
+//       value: 'TR,EN', // Selected value or Selected Array object. Example: [{value: "TR", text : "Türkçe" },{value: "EN", text : "English" }]
+//       multipleselect : true, // Default: false
+//       options : [
+//                       {value: "EN", text : "English" },
+//                       {value: "ES", text : "Español" },
+//                       {value: "TR", text : "Türkçe" },
+//                       {value: "DE", text : "Deutsch" },
+//                       {value: "FR", text : "Français" },
+//                       {value: "IT", text : "Italiano" },
+//                 ],
+//       button: {
+//         icon: 'check',
+//         label: 'OK'
+//       }
+//     }
+//   });
+// }).then(function (res) { // will be called when a button is clicked.
+//   delay: 1000,
+//   console.log(res.value); // will print "one" from 'value'
+});
+
+  </script>
+
+
 
   <div class="title">
     <h3 class="mid-text"> What We Treat</h3>
