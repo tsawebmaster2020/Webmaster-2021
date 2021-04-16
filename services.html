@@ -53,6 +53,7 @@ function myFunction() {
     </script>
 </head>
 <body>
+  <a name="services"></a>
 <!-- Header starts -->
 <nav class="sticky topnav navbar navbar-expand-md bg-dark navbar-dark">
   <img class="logo" src="medconnectlogo.png">
@@ -146,6 +147,8 @@ $(spans).hide().appendTo('.header').each(function (i) {
     }, 100);
 });</script>
   
+  <a id="services"></a>
+
   <div class="parallax">
    
   </div>
@@ -161,7 +164,6 @@ $(spans).hide().appendTo('.header').each(function (i) {
      </div>
      
   </div>
-<a name="services"></a>
 
 <!-- THESE ARE THE TABS -->
 
@@ -553,11 +555,18 @@ botui.message.add({
     content: 'Great! Which day are you available?',
   }).then(function () {
     return botui.action.text({ // show 'text' action
-delay: 3000,
+delay: 1000,
  action: {
     placeholder: 'Send a Message...'
   }
 });
+}).then(function (res){
+  botui.message.add({
+loading: true,
+delay: 1000,
+content: 'Great! You have an appointment with Dr. Baptiste at 2pm on ' + res.value + '!',
+})
+
 })
 }
 else {
